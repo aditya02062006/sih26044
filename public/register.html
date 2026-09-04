@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MediSetu | Create Account</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle at 15% 10%,#0c526e,transparent 28%),
+        radial-gradient(circle at 85% 85%,#0a443c,transparent 25%),
+        #05111f;
+    color:white;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    background:#081b2f;
+    border:1px solid #1e506f;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+
+.brand{
+    padding:50px;
+    background:linear-gradient(145deg,#092e4b,#071a2d);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.logo-icon{
+    position:relative;
+    width:64px;
+    height:64px;
+    border-radius:20px 20px 32px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    background:linear-gradient(145deg,#29df92,#13afe9);
+}
+
+.logo-icon:after{
+    content:"+";
+    position:absolute;
+    right:-3px;
+    top:-7px;
+    width:24px;
+    height:24px;
+    border-radius:6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#38e29c;
+    color:#06243a;
+    font-weight:bold;
+}
+
+.logo-name{
+    font-size:34px;
+    font-weight:900;
+}
+
+.logo-name span{
+    background:linear-gradient(90deg,#1ebcff,#39e39e);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.brand h1{
+    margin-top:45px;
+    font-size:33px;
+    line-height:1.25;
+}
+
+.brand h1 span{color:#38e1a3}
+
+.brand p{
+    margin-top:15px;
+    color:#91aabc;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.flow{
+    margin-top:30px;
+}
+
+.flow div{
+    padding:11px 0;
+    color:#b5cbd9;
+    font-size:12px;
+}
+
+.form-area{
+    padding:45px 55px;
+}
+
+.small{
+    color:#36d9e4;
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+h2{
+    font-size:28px;
+    margin-top:9px;
+}
+
+.subtitle{
+    color:#829bad;
+    font-size:12px;
+    margin-top:7px;
+}
+
+label{
+    display:block;
+    margin-top:17px;
+    margin-bottom:6px;
+    color:#c5d5df;
+    font-size:10px;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    background:#071a2c;
+    border:1px solid #2b5878;
+    color:white;
+    border-radius:8px;
+    outline:none;
+}
+
+select option{
+    background:#071a2c;
+}
+
+input:focus,
+select:focus{
+    border-color:#26d2dd;
+}
+
+button{
+    width:100%;
+    border:0;
+    margin-top:22px;
+    padding:13px;
+    border-radius:9px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    background:linear-gradient(90deg,#168df2,#1fd8aa);
+}
+
+.message{
+    min-height:18px;
+    margin-top:12px;
+    text-align:center;
+    font-size:11px;
+}
+
+.login{
+    text-align:center;
+    margin-top:18px;
+    color:#829bad;
+    font-size:11px;
+}
+
+.login a{
+    color:#35dbe3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+@media(max-width:800px){
+    .container{grid-template-columns:1fr}
+    .brand,.form-area{padding:35px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="brand">
+
+<div class="logo">
+
+<div class="logo-icon">🌿</div>
+
+<div class="logo-name">
+Medi<span>Setu</span>
+</div>
+
+</div>
+
+<h1>
+One platform.<br>
+<span>Three stakeholders.</span>
+</h1>
+
+<p>
+Connecting healthcare education with real skill demand,
+research, internships and employment opportunities.
+</p>
+
+<div class="flow">
+
+<div>🧠 Assess healthcare skills</div>
+<div>🎯 Identify competency gaps</div>
+<div>📚 Receive targeted training</div>
+<div>💼 Match with healthcare opportunities</div>
+<div>🏆 Track internship & placement outcomes</div>
+
+</div>
+
+</section>
+
+
+<section class="form-area">
+
+<div class="small">
+JOIN MEDISETU
+</div>
+
+<h2>Create your account</h2>
+
+<div class="subtitle">
+Choose your role to enter the appropriate MediSetu portal.
+</div>
+
+<form id="registerForm">
+
+<label>Full Name / Organization Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter name"
+required
+>
+
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter email"
+required
+>
+
+
+<label>Password</label>
+
+<input
+type="password"
+id="password"
+placeholder="Minimum 6 characters"
+minlength="6"
+required
+>
+
+
+<label>I am joining as</label>
+
+<select id="role" required>
+
+<option value="student">
+🎓 Student
+</option>
+
+<option value="industry">
+🏥 Industry / Hospital / Research Organization
+</option>
+
+<option value="institution">
+🏫 Institution / Academician
+</option>
+
+</select>
+
+
+<button type="submit">
+Create MediSetu Account →
+</button>
+
+</form>
+
+<div
+class="message"
+id="message">
+</div>
+
+<div class="login">
+
+Already have an account?
+
+<a href="login.html">
+Login
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+document
+.getElementById("registerForm")
+.addEventListener(
+"submit",
+async function(event){
+
+    event.preventDefault();
+
+    const message =
+        document.getElementById("message");
+
+    message.style.color="#8fa8bd";
+    message.innerText="Creating account...";
+
+    const role =
+        document.getElementById("role").value;
+
+    try{
+
+        const response =
+            await fetch(
+                "/api/register",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                        "application/json"
+                    },
+
+                    body:JSON.stringify({
+
+                        name:
+                            document
+                            .getElementById("name")
+                            .value.trim(),
+
+                        email:
+                            document
+                            .getElementById("email")
+                            .value.trim(),
+
+                        password:
+                            document
+                            .getElementById("password")
+                            .value,
+
+                        role:role
+                    })
+                }
+            );
+
+        const data =
+            await response.json();
+
+
+        if(!response.ok){
+
+            message.style.color="#ff7d87";
+
+            message.innerText =
+                data.message ||
+                "Unable to create account.";
+
+            return;
+        }
+
+
+        /*
+        Compatibility with all existing pages
+        */
+
+        localStorage.setItem(
+            "token",
+            data.token
+        );
+
+        localStorage.setItem(
+            "skillbridge_token",
+            data.token
+        );
+
+        localStorage.setItem(
+            "Medisetu_token",
+            data.token
+        );
+
+
+        if(data.user){
+
+            localStorage.setItem(
+                "Medisetu_user",
+                JSON.stringify(data.user)
+            );
+
+        }
+
+
+        message.style.color="#3fe3a7";
+
+        message.innerText =
+            "Account created successfully ✓";
+
+
+        setTimeout(()=>{
+
+            if(role === "industry"){
+
+                window.location.href =
+                    "industry.html";
+
+            }
+            else if(
+                role === "institution"
+            ){
+
+                window.location.href =
+                    "institution.html";
+
+            }
+            else{
+
+                window.location.href =
+                    "dashboard.html";
+
+            }
+
+        },500);
+
+
+    }catch(error){
+
+        console.error(error);
+
+        message.style.color="#ff7d87";
+
+        message.innerText =
+            "Unable to connect to MediSetu server.";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

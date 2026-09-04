@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediSetu | My Profile</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+:root{
+    --bg:#06111f;
+    --sidebar:#06182a;
+    --card:#0b2037;
+    --card2:#0d2945;
+    --border:#214b6d;
+    --cyan:#20d7e7;
+    --blue:#258cff;
+    --green:#35e09a;
+    --text:#f5f9fc;
+    --muted:#8fa8bd;
+}
+
+body{
+    background:
+        radial-gradient(circle at 80% 0%,#0e3d68,transparent 30%),
+        var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+.layout{
+    display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:250px;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    padding:22px 16px;
+    background:linear-gradient(180deg,#061a2e,#061421);
+    border-right:1px solid #1e4968;
+}
+
+/* LOGO */
+
+.brand{
+    padding:5px 8px 24px;
+    border-bottom:1px solid #163c59;
+    margin-bottom:20px;
+}
+
+.logo-wrap{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.logo-icon{
+    position:relative;
+    width:51px;
+    height:51px;
+    border-radius:16px 16px 25px 25px;
+    background:linear-gradient(145deg,#25e095,#13aee8);
+    box-shadow:0 0 25px rgba(30,210,220,.22);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:27px;
+}
+
+.logo-icon::after{
+    content:"+";
+    position:absolute;
+    right:-3px;
+    top:-7px;
+    width:20px;
+    height:20px;
+    border-radius:6px;
+    background:#32e29a;
+    color:#052136;
+    font-size:18px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo-text{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.logo-text span{
+    background:linear-gradient(90deg,#1ebaff,#31e29a);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.tagline{
+    margin-top:7px;
+    margin-left:2px;
+    color:#7695aa;
+    font-size:9px;
+    letter-spacing:.2px;
+}
+
+.menu-title{
+    color:#4fd7dd;
+    font-size:9px;
+    letter-spacing:2px;
+    margin:18px 10px 8px;
+}
+
+.nav{
+    display:block;
+    text-decoration:none;
+    color:#b0c4d3;
+    padding:11px 13px;
+    margin:5px 0;
+    border-radius:9px;
+    font-size:12px;
+    border:1px solid transparent;
+}
+
+.nav:hover,
+.nav.active{
+    color:white;
+    background:linear-gradient(90deg,#0d4161,#0b5b67);
+    border-color:#22748c;
+}
+
+.logout{
+    position:absolute;
+    bottom:24px;
+    left:28px;
+    color:#9cb4c5;
+    text-decoration:none;
+    font-size:12px;
+}
+
+/* MAIN */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:30px 36px 60px;
+}
+
+.back{
+    color:#48d8ff;
+    text-decoration:none;
+    font-size:11px;
+}
+
+.header{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.header h1{
+    font-size:30px;
+}
+
+.header p{
+    margin-top:7px;
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* PROFILE HERO */
+
+.profile-hero{
+    background:linear-gradient(135deg,#0b2139,#0e3151);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.identity{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.avatar{
+    width:67px;
+    height:67px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#168ff2,#18dfd1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(32,215,231,.18);
+}
+
+.identity h2{
+    font-size:20px;
+}
+
+.identity p{
+    color:#a5bbcb;
+    margin-top:5px;
+    font-size:11px;
+}
+
+.completion{
+    width:260px;
+}
+
+.completion-top{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+}
+
+.completion-top strong{
+    color:var(--green);
+    font-size:17px;
+}
+
+.progress{
+    height:8px;
+    background:#173c58;
+    border-radius:30px;
+    margin-top:9px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#1b9ef2,#2ee09a);
+    transition:.3s;
+}
+
+/* CONTENT */
+
+.content{
+    display:grid;
+    grid-template-columns:1fr 290px;
+    gap:18px;
+    margin-top:18px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0a1e33,#0d2945);
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:21px;
+}
+
+.card-title{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:17px;
+    margin-bottom:20px;
+}
+
+.card-title-icon{
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    background:linear-gradient(145deg,#126e9d,#17b6c6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* FORM */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px 18px;
+}
+
+.field label{
+    display:block;
+    color:#d7e4ed;
+    font-size:10px;
+    margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    background:#071b2e;
+    border:1px solid #326187;
+    border-radius:8px;
+    color:white;
+    padding:11px 12px;
+    outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#28cde2;
+    box-shadow:0 0 0 2px rgba(40,205,226,.08);
+}
+
+.field select option{
+    background:#071b2e;
+}
+
+.full{
+    grid-column:1 / -1;
+}
+
+textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+/* BUTTON */
+
+.save-btn{
+    margin-top:20px;
+    border:none;
+    border-radius:9px;
+    padding:12px 20px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    background:linear-gradient(90deg,#149bea,#24d99c);
+}
+
+.save-btn:hover{
+    transform:translateY(-1px);
+}
+
+.save-message{
+    margin-left:10px;
+    color:#42e6aa;
+    font-size:11px;
+}
+
+/* DOMAIN */
+
+.domain{
+    display:inline-block;
+    padding:7px 10px;
+    margin:4px 3px;
+    border-radius:20px;
+    background:#0c3b38;
+    border:1px solid #1e6d61;
+    color:#56e5ae;
+    font-size:10px;
+}
+
+.info{
+    color:#98b0c2;
+    font-size:11px;
+    line-height:1.7;
+}
+
+.tip{
+    margin-top:12px;
+    padding:12px;
+    border-radius:8px;
+    background:#09243c;
+    border-left:3px solid #23cee0;
+    color:#9fb7c8;
+    font-size:10px;
+    line-height:1.6;
+}
+
+@media(max-width:900px){
+    .content{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+    .sidebar{
+        width:75px;
+    }
+
+    .logo-text,
+    .tagline,
+    .menu-title{
+        display:none;
+    }
+
+    .logo-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .nav{
+        font-size:0;
+        text-align:center;
+    }
+
+    .main{
+        margin-left:75px;
+        width:calc(100% - 75px);
+        padding:20px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .profile-hero{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .completion{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="logo-wrap">
+
+<div class="logo-icon">
+🌿
+</div>
+
+<div class="logo-text">
+Medi<span>Setu</span>
+</div>
+
+</div>
+
+<div class="tagline">
+Bridging Skills. Building Healthcare Careers.
+</div>
+
+</div>
+
+<div class="menu-title">MAIN MENU</div>
+
+<a class="nav" href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a class="nav active" href="profile.html">
+👤 My Profile
+</a>
+
+<a class="nav" href="skills.html">
+🧠 Skill Assessment
+</a>
+
+<a class="nav" href="opportunities.html">
+💼 Opportunities
+</a>
+
+<a class="nav" href="applications.html">
+📄 Applications
+</a>
+
+<div class="menu-title">CAREER INTELLIGENCE</div>
+
+<a class="nav" href="skills.html#gap">
+🎯 Skill Gap
+</a>
+
+<a class="nav" href="skills.html#training">
+📚 Training & Learning
+</a>
+
+<a class="nav" href="skills.html#placement">
+🏆 Placement Tracker
+</a>
+
+<a class="logout" href="#" onclick="logout()">
+↪ Logout
+</a>
+
+</aside>
+
+<main class="main">
+
+<a href="dashboard.html" class="back">
+← Back to Dashboard
+</a>
+
+<div class="header">
+
+<h1>My Profile</h1>
+
+<p>
+Build your academic and healthcare profile for better
+skill matching, training and placement opportunities.
+</p>
+
+</div>
+
+<div class="profile-hero">
+
+<div class="identity">
+
+<div class="avatar" id="avatar">
+M
+</div>
+
+<div>
+<h2 id="displayName">MediSetu Student</h2>
+<p id="displayEmail">Healthcare learner</p>
+</div>
+
+</div>
+
+<div class="completion">
+
+<div class="completion-top">
+<span>Profile Completion</span>
+<strong id="completionText">0%</strong>
+</div>
+
+<div class="progress">
+<div id="completionBar"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="content">
+
+<div class="card">
+
+<div class="card-title">
+<div class="card-title-icon">👤</div>
+Personal & Academic Information
+</div>
+
+<form id="profileForm">
+
+<div class="form-grid">
+
+<div class="field">
+<label>Full Name</label>
+<input id="name" type="text" placeholder="Enter full name">
+</div>
+
+<div class="field">
+<label>Email Address</label>
+<input id="email" type="email" readonly>
+</div>
+
+<div class="field">
+<label>College / Institution</label>
+<input id="college" type="text" placeholder="Example: Government Ayurvedic College">
+</div>
+
+<div class="field">
+
+<label>Course</label>
+
+<select id="course">
+<option value="">Select course</option>
+<option>B.A.M.S</option>
+<option>B.Pharm</option>
+<option>MBBS</option>
+<option>B.Sc Nursing</option>
+<option>B.Sc Yoga</option>
+<option>BNYS</option>
+<option>M.D Ayurveda</option>
+<option>M.Pharm</option>
+<option>M.Sc</option>
+<option>Ph.D</option>
+<option>Other Healthcare Program</option>
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Graduation Year</label>
+
+<select id="graduationYear">
+<option value="">Select year</option>
+<option>2026</option>
+<option>2027</option>
+<option>2028</option>
+<option>2029</option>
+<option>2030</option>
+<option>2031</option>
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Primary Healthcare Domain</label>
+
+<select id="domain">
+<option value="">Select domain</option>
+<option>Ayurveda</option>
+<option>Modern Medicine & Clinical</option>
+<option>Clinical Research</option>
+<option>Pharmacognosy</option>
+<option>Yoga & Naturopathy</option>
+<option>AYUSH Pharma</option>
+<option>Integrative Healthcare</option>
+<option>Digital Health</option>
+<option>Public Health</option>
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Specialization / Interest Area</label>
+
+<select id="specialization">
+<option value="">Select specialization</option>
+<option>Kayachikitsa</option>
+<option>Panchakarma</option>
+<option>Dravyaguna</option>
+<option>Roga Nidana</option>
+<option>Shalya Tantra</option>
+<option>Shalakya Tantra</option>
+<option>Swasthavritta & Yoga</option>
+<option>Rasashastra</option>
+<option>Bhaishajya Kalpana</option>
+<option>Clinical Research</option>
+<option>Pharmacognosy</option>
+<option>Herbal Drug Research</option>
+<option>Yoga Therapy</option>
+<option>Public Health</option>
+<option>Digital Health & AI</option>
+<option>Hospital Management</option>
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Career Goal</label>
+
+<select id="careerInterest">
+<option value="">Select career goal</option>
+<option>Ayurvedic Physician</option>
+<option>Clinical Researcher</option>
+<option>Ayurvedic Research Scientist</option>
+<option>Pharmacognosy Researcher</option>
+<option>AYUSH Pharma Professional</option>
+<option>Yoga & Wellness Professional</option>
+<option>Public Health Professional</option>
+<option>Digital Health Professional</option>
+<option>Healthcare Data Analyst</option>
+<option>Hospital Management</option>
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>Research Interest</label>
+
+<input
+id="researchInterest"
+type="text"
+placeholder="Example: Clinical research in Ayurveda, herbal medicine..."
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>About Me</label>
+
+<textarea
+id="about"
+placeholder="Tell healthcare organizations about your interests, projects and career goals..."
+></textarea>
+
+</div>
+
+</div>
+
+<button class="save-btn" type="submit">
+✓ Save Profile
+</button>
+
+<span class="save-message" id="saveMessage"></span>
+
+</form>
+
+</div>
+
+
+<div>
+
+<div class="card">
+
+<div class="card-title">
+<div class="card-title-icon">🌿</div>
+Healthcare Domains
+</div>
+
+<span class="domain">🌿 Ayurveda</span>
+<span class="domain">🔬 Clinical Research</span>
+<span class="domain">🌱 Pharmacognosy</span>
+<span class="domain">🧘 Yoga & Naturopathy</span>
+<span class="domain">💊 AYUSH Pharma</span>
+<span class="domain">🩺 Clinical Care</span>
+<span class="domain">💻 Digital Health</span>
+
+</div>
+
+
+<div class="card" style="margin-top:18px;">
+
+<div class="card-title">
+<div class="card-title-icon">⭐</div>
+Why This Matters
+</div>
+
+<div class="info">
+
+A complete profile helps the MediSetu skill intelligence
+engine understand your academic background and career goal.
+
+</div>
+
+<div class="tip">
+🎯 Better profile data improves healthcare opportunity matching.
+</div>
+
+<div class="tip">
+🧠 Your skills are compared against real opportunity requirements.
+</div>
+
+<div class="tip">
+📚 Missing skills generate personalized learning recommendations.
+</div>
+
+<div class="tip">
+🏆 Improved skills increase internship and placement readiness.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+<script>
+
+const token =
+    localStorage.getItem("token") ||
+    localStorage.getItem("skillbridge_token") ||
+    localStorage.getItem("Medisetu_token");
+
+
+if(!token){
+    window.location.href = "login.html";
+}
+
+
+const fields = [
+    "name",
+    "college",
+    "course",
+    "graduationYear",
+    "domain",
+    "specialization",
+    "careerInterest",
+    "researchInterest",
+    "about"
+];
+
+
+async function loadProfile(){
+
+    try{
+
+        const response =
+            await fetch("/api/profile",{
+                headers:{
+                    "Authorization":
+                    `Bearer ${token}`
+                }
+            });
+
+        const data =
+            await response.json();
+
+        if(!response.ok){
+            console.error(data);
+            return;
+        }
+
+        const profile =
+            data.profile || {};
+
+        const user =
+            data.user || {};
+
+
+        document.getElementById("name").value =
+            profile.name ||
+            user.name ||
+            "";
+
+        document.getElementById("email").value =
+            profile.email ||
+            user.email ||
+            "";
+
+        document.getElementById("college").value =
+            profile.college ||
+            profile.institution ||
+            "";
+
+        document.getElementById("course").value =
+            profile.course || "";
+
+        document.getElementById("graduationYear").value =
+            profile.graduationYear || "";
+
+        document.getElementById("domain").value =
+            profile.domain || "";
+
+        document.getElementById("specialization").value =
+            profile.specialization || "";
+
+        document.getElementById("careerInterest").value =
+            profile.careerInterest ||
+            profile.careerGoal ||
+            "";
+
+        document.getElementById("researchInterest").value =
+            profile.researchInterest || "";
+
+        document.getElementById("about").value =
+            profile.about || "";
+
+
+        updateHeader();
+        updateCompletion();
+
+    }catch(error){
+
+        console.error(
+            "Profile loading error:",
+            error
+        );
+
+    }
+
+}
+
+
+document
+.getElementById("profileForm")
+.addEventListener(
+    "submit",
+    async function(event){
+
+        event.preventDefault();
+
+        const profileData = {
+
+            name:
+                document.getElementById("name").value.trim(),
+
+            email:
+                document.getElementById("email").value.trim(),
+
+            college:
+                document.getElementById("college").value.trim(),
+
+            institution:
+                document.getElementById("college").value.trim(),
+
+            course:
+                document.getElementById("course").value,
+
+            graduationYear:
+                document.getElementById("graduationYear").value,
+
+            domain:
+                document.getElementById("domain").value,
+
+            specialization:
+                document.getElementById("specialization").value,
+
+            careerInterest:
+                document.getElementById("careerInterest").value,
+
+            careerGoal:
+                document.getElementById("careerInterest").value,
+
+            researchInterest:
+                document.getElementById("researchInterest").value.trim(),
+
+            about:
+                document.getElementById("about").value.trim()
+
+        };
+
+
+        try{
+
+            const response =
+                await fetch(
+                    "/api/profile",
+                    {
+                        method:"PUT",
+
+                        headers:{
+                            "Authorization":
+                                `Bearer ${token}`,
+
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify(profileData)
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if(!response.ok){
+
+                alert(
+                    data.message ||
+                    "Unable to save profile."
+                );
+
+                return;
+            }
+
+
+            const message =
+                document.getElementById(
+                    "saveMessage"
+                );
+
+            message.innerText =
+                "Profile saved to database ✓";
+
+
+            updateHeader();
+            updateCompletion();
+
+
+            setTimeout(
+                ()=>{
+                    message.innerText="";
+                },
+                3000
+            );
+
+
+        }catch(error){
+
+            console.error(error);
+
+            alert(
+                "Unable to connect to MediSetu server."
+            );
+
+        }
+
+    }
+);
+
+
+function updateHeader(){
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+
+    document.getElementById(
+        "displayName"
+    ).innerText =
+        name || "MediSetu Student";
+
+
+    document.getElementById(
+        "displayEmail"
+    ).innerText =
+        email || "Healthcare learner";
+
+
+    document.getElementById(
+        "avatar"
+    ).innerText =
+        name
+        ?
+        name.charAt(0).toUpperCase()
+        :
+        "M";
+
+}
+
+
+function updateCompletion(){
+
+    let completed = 0;
+
+    fields.forEach(id=>{
+
+        const element =
+            document.getElementById(id);
+
+        if(
+            element &&
+            element.value.trim()
+        ){
+            completed++;
+        }
+
+    });
+
+
+    const percent =
+        Math.round(
+            (completed / fields.length)
+            * 100
+        );
+
+
+    document.getElementById(
+        "completionText"
+    ).innerText =
+        `${percent}%`;
+
+
+    document.getElementById(
+        "completionBar"
+    ).style.width =
+        `${percent}%`;
+
+}
+
+
+fields.forEach(id=>{
+
+    const element =
+        document.getElementById(id);
+
+    if(element){
+
+        element.addEventListener(
+            "input",
+            ()=>{
+                updateHeader();
+                updateCompletion();
+            }
+        );
+
+        element.addEventListener(
+            "change",
+            updateCompletion
+        );
+
+    }
+
+});
+
+
+function logout(){
+
+    localStorage.removeItem("token");
+    localStorage.removeItem("skillbridge_token");
+    localStorage.removeItem("Medisetu_token");
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+loadProfile();
+
+</script>
+
+</body>
+</html>

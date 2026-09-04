@@ -1,0 +1,906 @@
+{
+  "users": [
+    {
+      "id": "user_1788444928349_tef4ka",
+      "name": "Test student",
+      "email": "teststudent@example.com",
+      "password": "$2b$10$Jlz5v55sYi.cSzGZcJKNweALsEGI8GsAY19rX5u7DdCuQ84D2AqgG",
+      "role": "student",
+      "institution": "",
+      "company": "",
+      "phone": "",
+      "skills": [],
+      "education": "",
+      "bio": "",
+      "location": "",
+      "resume": "",
+      "profileCompletion": 30,
+      "createdAt": "2026-09-03T14:15:28.349Z"
+    },
+    {
+      "id": "user_1788449275262_4f70hr",
+      "name": "Garvit",
+      "email": "garvit@gmail.com",
+      "password": "$2b$10$jK.ND5xRAoRJP.XuwlIwOuanP5cmCA5BTizSYPiv01TDjbsnfpKk2",
+      "role": "student",
+      "institution": "",
+      "company": "",
+      "phone": "",
+      "skills": [],
+      "education": "",
+      "bio": "",
+      "location": "",
+      "resume": "",
+      "profileCompletion": 30,
+      "createdAt": "2026-09-03T15:27:55.262Z"
+    },
+    {
+      "id": "user_1788451483060_a2cv6b",
+      "name": "Tech4bharat",
+      "email": "tech4bharat@gmail.com",
+      "password": "$2b$10$J8yeX7E0vVdR9A3SeFMk7OIh6hOrZWXj0KdbacrbZbGCkZuXg66lG",
+      "role": "student",
+      "institution": "",
+      "company": "",
+      "phone": "",
+      "skills": [],
+      "education": "",
+      "bio": "",
+      "location": "",
+      "resume": "",
+      "profileCompletion": 30,
+      "createdAt": "2026-09-03T16:04:43.060Z"
+    },
+    {
+      "id": "user_1788455644278_8xwu1z",
+      "name": "Adrija Sharma",
+      "email": "techbharat@gmail.com",
+      "password": "$2b$10$FKwNxfNk5Ex9uvJkpuSbeOudz1Y0ty9gDXOhwzKDhpshKzuLrGCRi",
+      "role": "student",
+      "institution": "",
+      "company": "",
+      "phone": "",
+      "skills": [],
+      "education": "",
+      "bio": "",
+      "location": "",
+      "resume": "",
+      "profileCompletion": 30,
+      "createdAt": "2026-09-03T17:14:04.278Z"
+    },
+    {
+      "id": "user_1788458481507_8op0nf",
+      "name": "Rupesh mall",
+      "email": "anjanamall8381@gmail.com",
+      "password": "$2b$10$caK7L3P1G3WKhe.WRAZNPeGKMKDfYlHjY9M6uqkMQr8mWWagoFTf6",
+      "role": "student",
+      "institution": "",
+      "company": "",
+      "phone": "",
+      "skills": [],
+      "education": "",
+      "bio": "",
+      "location": "",
+      "resume": "",
+      "profileCompletion": 30,
+      "createdAt": "2026-09-03T18:01:21.507Z"
+    },
+    {
+      "id": "user_1788464865112_1f6dc676",
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "password": "$2b$10$b8dsvfTSp9XMuGO4tBUzEOlZZxZAbtQ8dSIw7.gonZIczintEGcN6",
+      "role": "industry",
+      "createdAt": "2026-09-03T19:47:45.112Z"
+    },
+    {
+      "id": "user_1788465394136_173960ca",
+      "name": "YASHI",
+      "email": "yashi29@gmail.com",
+      "password": "$2b$10$WGqgLUYd53BJN/cLTJCfwuHHotApthNPpkiRQM2BCAkXrO/CAO4W6",
+      "role": "student",
+      "createdAt": "2026-09-03T19:56:34.136Z"
+    },
+    {
+      "id": "user_1788465953119_0a586176",
+      "name": "Aditya verma",
+      "email": "aditya4454verma@gmail.com",
+      "password": "$2b$10$YTSDl4S1/xlFcT6W2JzK5.jWYWuat0iJw/FvuImZkE1kJv8RZ1IJq",
+      "role": "industry",
+      "createdAt": "2026-09-03T20:05:53.119Z"
+    },
+    {
+      "id": "user_1788466029897_446f9237",
+      "name": "yogyata yadav",
+      "email": "salesmarketing817@gmail.com",
+      "password": "$2b$10$IRVE3DAUYsQGE5nBIRZV7ujUmojRT3yx4mLrzMQaVeLSDKULclyqW",
+      "role": "student",
+      "createdAt": "2026-09-03T20:07:09.897Z"
+    },
+    {
+      "id": "user_1788466106375_c3fe6765",
+      "name": "MANYA",
+      "email": "manya2@gmail.com",
+      "password": "$2b$10$5LMagPVdn5xjefy4dwSHF.mYgofSj1y8Q7EfKpQpx104dQcw9BBcW",
+      "role": "industry",
+      "createdAt": "2026-09-03T20:08:26.375Z"
+    },
+    {
+      "id": "user_1788466646180_a99db407",
+      "name": "adarsh",
+      "email": "codescollagehackathon@gmail.com",
+      "password": "$2b$10$hOl02wo.08o25rR1HclWaOIuZ2LgrGExfsNjp5T2ubyq/HiFWEn7u",
+      "role": "industry",
+      "createdAt": "2026-09-03T20:17:26.180Z"
+    },
+    {
+      "id": "user_1788466721240_57362f14",
+      "name": "Aditya verma",
+      "email": "kais5hal5578@gmail.com",
+      "password": "$2b$10$paPCmMuWJLgIriko1kabk.DW0hGHmJCDQEjsoRv6Io0D4cf22Er3S",
+      "role": "student",
+      "createdAt": "2026-09-03T20:18:41.240Z"
+    },
+    {
+      "id": "user_1788468624609_f44382ff",
+      "name": "CMS",
+      "email": "cms@gmail.com",
+      "password": "$2b$10$23UjXyFpOVjDKEjvV7ufFOWz3AuvpnNjvypDboFOj6ZjrFKpzoWwS",
+      "role": "institution",
+      "createdAt": "2026-09-03T20:50:24.610Z"
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Python",
+    "Java",
+    "C++",
+    "C",
+    "HTML",
+    "CSS",
+    "React",
+    "Node.js",
+    "SQL",
+    "MongoDB",
+    "AI/ML",
+    "Data Science",
+    "Cloud Computing",
+    "AWS",
+    "Docker",
+    "Cyber Security",
+    "UI/UX",
+    "Communication",
+    "Leadership"
+  ],
+  "internships": [],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Ayurvedic Hospital Clinical Internship",
+      "company": "National Ayurveda Hospital",
+      "location": "Jaipur",
+      "type": "Internship",
+      "duration": "6 Months",
+      "skills": [
+        "Kayachikitsa",
+        "Roga Nidana",
+        "Patient Examination",
+        "Clinical Documentation"
+      ],
+      "match": 88
+    },
+    {
+      "id": "2",
+      "title": "Ayurvedic Research Laboratory Internship",
+      "company": "AYUSH Clinical Research Centre",
+      "location": "Delhi",
+      "type": "Research Internship",
+      "duration": "4 Months",
+      "skills": [
+        "Clinical Research",
+        "Research Methodology",
+        "Biostatistics",
+        "Evidence Based Medicine"
+      ],
+      "match": 84
+    },
+    {
+      "id": "3",
+      "title": "Pharmacognosy & Medicinal Plant Research",
+      "company": "Herbal Drug Research Laboratory",
+      "location": "Lucknow",
+      "type": "Research Project",
+      "duration": "12 Weeks",
+      "skills": [
+        "Dravyaguna",
+        "Pharmacognosy",
+        "Medicinal Plant Identification",
+        "Herbal Drug Development"
+      ],
+      "match": 82
+    },
+    {
+      "id": "4",
+      "title": "Yoga & Naturopathy Wellness Internship",
+      "company": "Integrated Wellness Centre",
+      "location": "Rishikesh",
+      "type": "Internship",
+      "duration": "3 Months",
+      "skills": [
+        "Yoga Therapy",
+        "Naturopathy",
+        "Preventive Healthcare",
+        "Lifestyle Medicine"
+      ],
+      "match": 79
+    },
+    {
+      "id": "5",
+      "title": "Panchakarma Therapy Internship",
+      "company": "Ayurveda Panchakarma Institute",
+      "location": "Kerala",
+      "type": "Clinical Internship",
+      "duration": "4 Months",
+      "skills": [
+        "Panchakarma",
+        "Prakriti Assessment",
+        "Ayurvedic Nutrition",
+        "Patient Communication"
+      ],
+      "match": 86
+    },
+    {
+      "id": "6",
+      "title": "Ayurvedic Pharmacy & Drug Manufacturing",
+      "company": "AYUSH Herbal Pharmaceuticals",
+      "location": "Haridwar",
+      "type": "Industry Internship",
+      "duration": "6 Months",
+      "skills": [
+        "Ayurvedic Pharmacy",
+        "Bhaishajya Kalpana",
+        "Drug Manufacturing",
+        "Quality Control"
+      ],
+      "match": 81
+    },
+    {
+      "id": "7",
+      "title": "Integrative Medicine Clinical Research",
+      "company": "Integrative Healthcare Institute",
+      "location": "Bengaluru",
+      "type": "Research Internship",
+      "duration": "6 Months",
+      "skills": [
+        "Integrative Medicine",
+        "Clinical Research",
+        "Research Ethics",
+        "Clinical Documentation"
+      ],
+      "match": 83
+    },
+    {
+      "id": "8",
+      "title": "Digital Health & AYUSH Data Internship",
+      "company": "Healthcare Innovation Lab",
+      "location": "Remote",
+      "type": "Digital Health Internship",
+      "duration": "4 Months",
+      "skills": [
+        "Digital Health",
+        "Healthcare Data Analysis",
+        "Electronic Health Records",
+        "AI in Healthcare"
+      ],
+      "match": 76
+    },
+    {
+      "id": "9",
+      "title": "Preventive & Community Healthcare Project",
+      "company": "Community Healthcare Research Centre",
+      "location": "Varanasi",
+      "type": "Project",
+      "duration": "8 Weeks",
+      "skills": [
+        "Public Health",
+        "Preventive Healthcare",
+        "Community Health",
+        "Data Collection"
+      ],
+      "match": 74
+    },
+    {
+      "id": "10",
+      "title": "Herbal Product Quality Control Trainee",
+      "company": "Natural Medicine Laboratories",
+      "location": "Pune",
+      "type": "Industry Training",
+      "duration": "5 Months",
+      "skills": [
+        "Quality Control",
+        "Drug Standardization",
+        "GMP",
+        "Herbal Product Formulation"
+      ],
+      "match": 80
+    },
+    {
+      "id": "11",
+      "title": "Modern Clinical Research Internship",
+      "company": "Clinical Research Hospital",
+      "location": "Hyderabad",
+      "type": "Research Internship",
+      "duration": "6 Months",
+      "skills": [
+        "Clinical Research",
+        "Biostatistics",
+        "Clinical Documentation",
+        "Research Ethics"
+      ],
+      "match": 78
+    },
+    {
+      "id": "12",
+      "title": "Hospital Management Trainee",
+      "company": "Integrated Healthcare Network",
+      "location": "Mumbai",
+      "type": "Industry Training",
+      "duration": "6 Months",
+      "skills": [
+        "Hospital Management",
+        "Communication",
+        "Leadership",
+        "Patient Communication"
+      ],
+      "match": 72
+    }
+  ],
+  "applications": [
+    {
+      "id": "application_1788454051660_c38ump",
+      "studentId": "user_1788451483060_a2cv6b",
+      "opportunityId": "1",
+      "opportunityType": "job",
+      "title": "Full Stack Developer Intern",
+      "company": "TechNova",
+      "status": "Applied",
+      "appliedAt": "2026-09-03T16:47:31.660Z"
+    },
+    {
+      "id": "application_1788454513641_vxkfwj",
+      "studentId": "user_1788451483060_a2cv6b",
+      "opportunityId": "2",
+      "opportunityType": "job",
+      "title": "AI / ML Intern",
+      "company": "AI Labs",
+      "status": "Applied",
+      "appliedAt": "2026-09-03T16:55:13.641Z"
+    },
+    {
+      "id": "application_1788463208572_e76ddd21",
+      "studentId": "user_1788451483060_a2cv6b",
+      "studentName": "Tech4bharat",
+      "studentEmail": "tech4bharat@gmail.com",
+      "opportunityId": "5",
+      "opportunityType": "Clinical Internship",
+      "title": "Panchakarma Therapy Internship",
+      "company": "Ayurveda Panchakarma Institute",
+      "location": "Kerala",
+      "duration": "4 Months",
+      "match": 86,
+      "skills": [
+        "Panchakarma",
+        "Prakriti Assessment",
+        "Ayurvedic Nutrition",
+        "Patient Communication"
+      ],
+      "status": "Selected",
+      "appliedAt": "2026-09-03T19:20:08.573Z",
+      "updatedAt": "2026-09-03T20:06:32.990Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T19:20:08.573Z",
+          "note": "Application submitted successfully."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:06:19.391Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-03T20:06:25.205Z",
+          "note": "Status updated to Selected by recruiter."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-03T20:06:32.990Z",
+          "note": "Status updated to Selected by recruiter."
+        }
+      ]
+    },
+    {
+      "id": "application_1788465838465_929f83ac",
+      "studentId": "user_1788465394136_173960ca",
+      "studentName": "YASHI",
+      "studentEmail": "yashi29@gmail.com",
+      "opportunityId": "1",
+      "opportunityType": "Internship",
+      "title": "Ayurvedic Hospital Clinical Internship",
+      "company": "National Ayurveda Hospital",
+      "location": "Jaipur",
+      "duration": "6 Months",
+      "match": 88,
+      "skills": [
+        "Kayachikitsa",
+        "Roga Nidana",
+        "Patient Examination",
+        "Clinical Documentation"
+      ],
+      "status": "Applied",
+      "appliedAt": "2026-09-03T20:03:58.465Z",
+      "updatedAt": "2026-09-03T20:03:58.465Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:03:58.465Z",
+          "note": "Application submitted successfully."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466007269_3a62f3c6",
+      "studentId": "user_1788465394136_173960ca",
+      "studentName": "YASHI",
+      "studentEmail": "yashi29@gmail.com",
+      "opportunityId": "5",
+      "opportunityType": "Clinical Internship",
+      "title": "Panchakarma Therapy Internship",
+      "company": "Ayurveda Panchakarma Institute",
+      "location": "Kerala",
+      "duration": "4 Months",
+      "match": 86,
+      "skills": [
+        "Panchakarma",
+        "Prakriti Assessment",
+        "Ayurvedic Nutrition",
+        "Patient Communication"
+      ],
+      "status": "Selected",
+      "appliedAt": "2026-09-03T20:06:47.269Z",
+      "updatedAt": "2026-09-04T10:33:13.270Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:06:47.270Z",
+          "note": "Application submitted successfully."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-03T20:43:26.873Z",
+          "note": "Status updated to Selected by recruiter."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-04T10:33:13.270Z",
+          "note": "Status updated to Selected by recruiter."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466090812_6e24ce36",
+      "studentId": "user_1788466029897_446f9237",
+      "studentName": "yogyata yadav",
+      "studentEmail": "salesmarketing817@gmail.com",
+      "opportunityId": "1",
+      "opportunityType": "Internship",
+      "title": "Ayurvedic Hospital Clinical Internship",
+      "company": "National Ayurveda Hospital",
+      "location": "Jaipur",
+      "duration": "6 Months",
+      "match": 88,
+      "skills": [
+        "Kayachikitsa",
+        "Roga Nidana",
+        "Patient Examination",
+        "Clinical Documentation"
+      ],
+      "status": "Applied",
+      "appliedAt": "2026-09-03T20:08:10.812Z",
+      "updatedAt": "2026-09-03T20:08:10.812Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:08:10.812Z",
+          "note": "Application submitted successfully."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466109409_65371de6",
+      "studentId": "user_1788451483060_a2cv6b",
+      "studentName": "Tech4bharat",
+      "studentEmail": "tech4bharat@gmail.com",
+      "opportunityId": "4",
+      "opportunityType": "Internship",
+      "title": "Yoga & Naturopathy Wellness Internship",
+      "company": "Integrated Wellness Centre",
+      "location": "Rishikesh",
+      "duration": "3 Months",
+      "match": 79,
+      "skills": [
+        "Yoga Therapy",
+        "Naturopathy",
+        "Preventive Healthcare",
+        "Lifestyle Medicine"
+      ],
+      "status": "Rejected",
+      "appliedAt": "2026-09-03T20:08:29.410Z",
+      "updatedAt": "2026-09-03T20:09:36.545Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:08:29.410Z",
+          "note": "Application submitted successfully."
+        },
+        {
+          "status": "Rejected",
+          "date": "2026-09-03T20:09:36.545Z",
+          "note": "Status updated to Rejected by recruiter."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466143583_5fc09e70",
+      "studentId": "user_1788466029897_446f9237",
+      "studentName": "yogyata yadav",
+      "studentEmail": "salesmarketing817@gmail.com",
+      "opportunityId": "8",
+      "opportunityType": "Digital Health Internship",
+      "title": "Digital Health & AYUSH Data Internship",
+      "company": "Healthcare Innovation Lab",
+      "location": "Remote",
+      "duration": "4 Months",
+      "match": 76,
+      "skills": [
+        "Digital Health",
+        "Healthcare Data Analysis",
+        "Electronic Health Records",
+        "AI in Healthcare"
+      ],
+      "status": "Selected",
+      "appliedAt": "2026-09-03T20:09:03.583Z",
+      "updatedAt": "2026-09-03T20:24:42.055Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:09:03.583Z",
+          "note": "Application submitted successfully."
+        },
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:21:39.095Z",
+          "note": "Status updated to Applied by recruiter."
+        },
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:21:39.840Z",
+          "note": "Status updated to Applied by recruiter."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:21:47.177Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:22:38.057Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:22:39.195Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:22:48.238Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Shortlisted",
+          "date": "2026-09-03T20:22:49.136Z",
+          "note": "Status updated to Shortlisted by recruiter."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-03T20:24:36.597Z",
+          "note": "Status updated to Selected by recruiter."
+        },
+        {
+          "status": "Selected",
+          "date": "2026-09-03T20:24:42.055Z",
+          "note": "Status updated to Selected by recruiter."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466669150_742a8152",
+      "studentId": "user_1788451483060_a2cv6b",
+      "studentName": "Tech4bharat",
+      "studentEmail": "tech4bharat@gmail.com",
+      "opportunityId": "3",
+      "opportunityType": "Research Project",
+      "title": "Pharmacognosy & Medicinal Plant Research",
+      "company": "Herbal Drug Research Laboratory",
+      "location": "Lucknow",
+      "duration": "12 Weeks",
+      "match": 82,
+      "skills": [
+        "Dravyaguna",
+        "Pharmacognosy",
+        "Medicinal Plant Identification",
+        "Herbal Drug Development"
+      ],
+      "status": "Applied",
+      "appliedAt": "2026-09-03T20:17:49.150Z",
+      "updatedAt": "2026-09-03T20:17:49.150Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:17:49.150Z",
+          "note": "Application submitted successfully."
+        }
+      ]
+    },
+    {
+      "id": "application_1788466971079_f91f9b87",
+      "studentId": "user_1788466721240_57362f14",
+      "studentName": "Aditya verma",
+      "studentEmail": "kais5hal5578@gmail.com",
+      "opportunityId": "7",
+      "opportunityType": "Research Internship",
+      "title": "Integrative Medicine Clinical Research",
+      "company": "Integrative Healthcare Institute",
+      "location": "Bengaluru",
+      "duration": "6 Months",
+      "match": 83,
+      "skills": [
+        "Integrative Medicine",
+        "Clinical Research",
+        "Research Ethics",
+        "Clinical Documentation"
+      ],
+      "status": "Applied",
+      "appliedAt": "2026-09-03T20:22:51.079Z",
+      "updatedAt": "2026-09-03T20:22:51.079Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:22:51.079Z",
+          "note": "Application submitted successfully."
+        }
+      ]
+    },
+    {
+      "id": "application_1788467068026_10745cbd",
+      "studentId": "user_1788466721240_57362f14",
+      "studentName": "Aditya verma",
+      "studentEmail": "kais5hal5578@gmail.com",
+      "opportunityId": "5",
+      "opportunityType": "Clinical Internship",
+      "title": "Panchakarma Therapy Internship",
+      "company": "Ayurveda Panchakarma Institute",
+      "location": "Kerala",
+      "duration": "4 Months",
+      "match": 86,
+      "skills": [
+        "Panchakarma",
+        "Prakriti Assessment",
+        "Ayurvedic Nutrition",
+        "Patient Communication"
+      ],
+      "status": "Applied",
+      "appliedAt": "2026-09-03T20:24:28.026Z",
+      "updatedAt": "2026-09-03T20:43:02.569Z",
+      "timeline": [
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:24:28.026Z",
+          "note": "Application submitted successfully."
+        },
+        {
+          "status": "Applied",
+          "date": "2026-09-03T20:43:02.569Z",
+          "note": "Status updated to Applied by recruiter."
+        }
+      ]
+    }
+  ],
+  "projects": [],
+  "mentorships": [],
+  "notifications": [],
+  "profiles": [
+    {
+      "id": "profile_1788464354964_e73eff4b",
+      "userId": "user_1788451483060_a2cv6b",
+      "fullName": "Tech4bharat",
+      "email": "tech4bharat@gmail.com",
+      "role": "student",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [
+        "Ayurveda Fundamentals",
+        "Clinical Documentation",
+        "Research Methodology",
+        "Patient Communication",
+        "Wellness Management",
+        "Naturopathy"
+      ],
+      "updatedAt": "2026-09-03T20:04:35.133Z"
+    },
+    {
+      "id": "profile_1788464865112_5d1c9d05",
+      "userId": "user_1788464865112_1f6dc676",
+      "fullName": "Rahul",
+      "email": "rahul@gmail.com",
+      "role": "industry",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [],
+      "updatedAt": "2026-09-03T19:47:45.112Z"
+    },
+    {
+      "id": "profile_1788465394136_11a356fc",
+      "userId": "user_1788465394136_173960ca",
+      "fullName": "YASHI",
+      "email": "yashi29@gmail.com",
+      "role": "student",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [
+        "Ayurveda Fundamentals",
+        "Research Methodology",
+        "Clinical Documentation",
+        "Swasthavritta & Yoga",
+        "Bhaishajya Kalpana",
+        "Patient Communication",
+        "Human Anatomy",
+        "Nutrition & Dietetics",
+        "Yoga Therapy",
+        "Research Data Analysis",
+        "Digital Health",
+        "Medical Informatics",
+        "AI in Healthcare",
+        "Quality Control",
+        "Regulatory Affairs",
+        "Leadership",
+        "Teamwork",
+        "Communication",
+        "Quality Assurance",
+        "Telemedicine",
+        "Electronic Health Records",
+        "Healthcare Data Analysis",
+        "Data Visualization"
+      ],
+      "updatedAt": "2026-09-03T20:03:39.977Z"
+    },
+    {
+      "id": "profile_1788465953119_0386180d",
+      "userId": "user_1788465953119_0a586176",
+      "fullName": "Aditya verma",
+      "email": "aditya4454verma@gmail.com",
+      "role": "industry",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [],
+      "updatedAt": "2026-09-03T20:05:53.119Z"
+    },
+    {
+      "id": "profile_1788466029897_454bbcab",
+      "userId": "user_1788466029897_446f9237",
+      "fullName": "yogyata yadav",
+      "email": "salesmarketing817@gmail.com",
+      "role": "student",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [
+        "Ayurveda Fundamentals",
+        "Clinical Documentation",
+        "Research Methodology",
+        "Patient Communication",
+        "Yoga Therapy",
+        "Naturopathy"
+      ],
+      "updatedAt": "2026-09-03T20:08:00.913Z"
+    },
+    {
+      "id": "profile_1788466106375_e1ff4ed4",
+      "userId": "user_1788466106375_c3fe6765",
+      "fullName": "MANYA",
+      "email": "manya2@gmail.com",
+      "role": "industry",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [],
+      "updatedAt": "2026-09-03T20:08:26.375Z"
+    },
+    {
+      "id": "profile_1788466646180_e928237a",
+      "userId": "user_1788466646180_a99db407",
+      "fullName": "adarsh",
+      "email": "codescollagehackathon@gmail.com",
+      "role": "industry",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [],
+      "updatedAt": "2026-09-03T20:17:26.180Z"
+    },
+    {
+      "id": "profile_1788466721240_918cbb67",
+      "userId": "user_1788466721240_57362f14",
+      "fullName": "Aditya verma",
+      "email": "kais5hal5578@gmail.com",
+      "role": "student",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [
+        "Ayurveda Fundamentals",
+        "Clinical Documentation",
+        "Research Methodology",
+        "Patient Communication",
+        "Wellness Management",
+        "Naturopathy"
+      ],
+      "updatedAt": "2026-09-03T20:21:15.355Z"
+    },
+    {
+      "id": "profile_1788468624610_f4cbd39a",
+      "userId": "user_1788468624609_f44382ff",
+      "fullName": "CMS",
+      "email": "cms@gmail.com",
+      "role": "institution",
+      "phone": "",
+      "institution": "",
+      "course": "",
+      "specialization": "",
+      "location": "",
+      "bio": "",
+      "skills": [],
+      "updatedAt": "2026-09-03T20:50:24.610Z"
+    }
+  ]
+}

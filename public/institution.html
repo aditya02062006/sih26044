@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediSetu | Institution Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+:root{
+    --bg:#06111f;
+    --card:#0c2037;
+    --border:#20476a;
+    --blue:#258cff;
+    --cyan:#22d3ee;
+    --green:#37e3a5;
+    --orange:#ffb45e;
+    --text:#f4f8fc;
+    --muted:#8fa8bd;
+}
+
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 85% 5%,#113b67,transparent 30%),
+        var(--bg);
+    color:var(--text);
+}
+
+.layout{
+    display:flex;
+}
+
+.sidebar{
+    width:240px;
+    position:fixed;
+    top:0;
+    bottom:0;
+    padding:25px 16px;
+    background:#071729;
+    border-right:1px solid var(--border);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:800;
+    margin:0 10px 30px;
+}
+
+.logo span{
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.portal{
+    margin:0 8px 25px;
+    padding:9px;
+    background:#103650;
+    border:1px solid #285b7e;
+    border-radius:8px;
+    color:#55dbff;
+    font-size:10px;
+    text-align:center;
+}
+
+.menu-title{
+    color:#607d94;
+    font-size:9px;
+    letter-spacing:2px;
+    margin:18px 10px 8px;
+}
+
+.nav{
+    display:block;
+    text-decoration:none;
+    color:#a5bccd;
+    padding:11px 13px;
+    margin:5px 0;
+    border-radius:9px;
+    font-size:13px;
+}
+
+.nav:hover,
+.nav.active{
+    background:#113857;
+    border:1px solid #286d9d;
+    color:white;
+}
+
+.main{
+    margin-left:240px;
+    width:calc(100% - 240px);
+    padding:30px 38px 60px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:29px;
+}
+
+.header p{
+    margin-top:8px;
+    color:var(--muted);
+    max-width:750px;
+    line-height:1.6;
+}
+
+.badge{
+    padding:9px 14px;
+    border-radius:20px;
+    background:#0c3551;
+    border:1px solid #27658d;
+    color:#50dcff;
+    font-size:11px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat{
+    background:linear-gradient(145deg,#0b1d32,#102a46);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:19px;
+}
+
+.stat strong{
+    display:block;
+    font-size:28px;
+    margin-top:10px;
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:10px;
+}
+
+.blue{color:#4acbff;}
+.green{color:var(--green);}
+.orange{color:var(--orange);}
+
+.section{
+    margin-top:25px;
+}
+
+.section h2{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0b1d32,#102a46);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+}
+
+.card h3{
+    font-size:15px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:11px;
+    margin-top:8px;
+    line-height:1.5;
+}
+
+.skill-row{
+    margin-top:14px;
+}
+
+.skill-head{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:#b9cede;
+}
+
+.progress{
+    height:8px;
+    background:#17354e;
+    border-radius:20px;
+    margin-top:7px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:100%;
+    background:linear-gradient(90deg,#258cff,#22d3ee);
+}
+
+.alert{
+    margin-top:12px;
+    padding:12px;
+    background:#332819;
+    border-left:3px solid var(--orange);
+    border-radius:7px;
+    color:#ffc47c;
+    font-size:11px;
+}
+
+.success{
+    margin-top:12px;
+    padding:12px;
+    background:#12372e;
+    border-left:3px solid var(--green);
+    border-radius:7px;
+    color:#59e4b9;
+    font-size:11px;
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:12px;
+}
+
+.table th,
+.table td{
+    padding:12px 10px;
+    text-align:left;
+    border-bottom:1px solid #1c405d;
+    font-size:11px;
+}
+
+.table th{
+    color:#6f91aa;
+}
+
+.table td{
+    color:#bfd0dc;
+}
+
+.status{
+    padding:5px 7px;
+    border-radius:20px;
+    background:#103650;
+    color:#55dcff;
+    font-size:9px;
+}
+
+@media(max-width:900px){
+    .stats,
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:700px){
+    .sidebar{
+        width:75px;
+    }
+
+    .logo{
+        font-size:0;
+    }
+
+    .logo::after{
+        content:"MS";
+        font-size:20px;
+        color:#45d8ff;
+    }
+
+    .portal,
+    .menu-title{
+        display:none;
+    }
+
+    .nav{
+        font-size:0;
+    }
+
+    .main{
+        margin-left:75px;
+        width:calc(100% - 75px);
+        padding:20px;
+    }
+
+    .stats,
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+Medi<span>Setu</span>
+</div>
+
+<div class="portal">
+🏫 INSTITUTION / ACADEMICIAN PORTAL
+</div>
+
+<div class="menu-title">ACADEMIC INTELLIGENCE</div>
+
+<a class="nav active" href="institution.html">
+📊 Institution Dashboard
+</a>
+
+<a class="nav" href="#skills">
+🧠 Skill Analytics
+</a>
+
+<a class="nav" href="#placement">
+🏆 Placement Analytics
+</a>
+
+<a class="nav" href="#industry">
+🤝 Industry Demand
+</a>
+
+<a class="nav" href="#training">
+📚 Training Planning
+</a>
+
+<div class="menu-title">COLLABORATION</div>
+
+<a class="nav" href="#research">
+🔬 Research Projects
+</a>
+
+<a class="nav" href="#mentorship">
+👨‍🏫 Mentorship
+</a>
+
+</aside>
+
+
+<main class="main">
+
+<div class="header">
+
+<div>
+
+<h1>
+Institution Skill & Placement Intelligence
+</h1>
+
+<p>
+Monitor student readiness, identify common skill gaps,
+understand healthcare industry demand and improve
+training, internships and placement outcomes.
+</p>
+
+</div>
+
+<div class="badge">
+● ACADEMIC ANALYTICS
+</div>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<div>🎓</div>
+<strong class="blue">420</strong>
+<span>STUDENTS MAPPED</span>
+</div>
+
+<div class="stat">
+<div>🧠</div>
+<strong class="orange">68%</strong>
+<span>AVERAGE SKILL READINESS</span>
+</div>
+
+<div class="stat">
+<div>💼</div>
+<strong class="green">146</strong>
+<span>ACTIVE INTERNSHIPS</span>
+</div>
+
+<div class="stat">
+<div>🏆</div>
+<strong class="green">82%</strong>
+<span>PLACEMENT READINESS</span>
+</div>
+
+</div>
+
+
+<section class="section" id="skills">
+
+<h2>
+Skill Gap Analytics
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🌿 Ayurveda Skills</h3>
+
+<p>
+Average competency across Ayurveda-focused student profiles.
+</p>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Ayurveda Fundamentals</span>
+<span>84%</span>
+</div>
+<div class="progress"><div style="width:84%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Kayachikitsa</span>
+<span>71%</span>
+</div>
+<div class="progress"><div style="width:71%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Panchakarma</span>
+<span>64%</span>
+</div>
+<div class="progress"><div style="width:64%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Dravyaguna</span>
+<span>69%</span>
+</div>
+<div class="progress"><div style="width:69%"></div></div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>🔬 Research & Modern Healthcare</h3>
+
+<p>
+Common readiness levels in research and modern clinical skills.
+</p>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Clinical Research</span>
+<span>58%</span>
+</div>
+<div class="progress"><div style="width:58%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Research Methodology</span>
+<span>66%</span>
+</div>
+<div class="progress"><div style="width:66%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Biostatistics</span>
+<span>41%</span>
+</div>
+<div class="progress"><div style="width:41%"></div></div>
+</div>
+
+<div class="skill-row">
+<div class="skill-head">
+<span>Clinical Documentation</span>
+<span>61%</span>
+</div>
+<div class="progress"><div style="width:61%"></div></div>
+</div>
+
+<div class="alert">
+⚠ Biostatistics is currently one of the largest skill gaps.
+Recommended action: introduce targeted training.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="industry">
+
+<h2>
+Industry Demand vs Student Readiness
+</h2>
+
+<div class="card">
+
+<table class="table">
+
+<tr>
+<th>Skill</th>
+<th>Industry Demand</th>
+<th>Student Readiness</th>
+<th>Gap</th>
+</tr>
+
+<tr>
+<td>Clinical Research</td>
+<td>92%</td>
+<td>58%</td>
+<td><span class="status">34% Gap</span></td>
+</tr>
+
+<tr>
+<td>Biostatistics</td>
+<td>85%</td>
+<td>41%</td>
+<td><span class="status">44% Gap</span></td>
+</tr>
+
+<tr>
+<td>Digital Health</td>
+<td>88%</td>
+<td>46%</td>
+<td><span class="status">42% Gap</span></td>
+</tr>
+
+<tr>
+<td>Pharmacognosy</td>
+<td>77%</td>
+<td>62%</td>
+<td><span class="status">15% Gap</span></td>
+</tr>
+
+<tr>
+<td>Yoga Therapy</td>
+<td>71%</td>
+<td>68%</td>
+<td><span class="status">3% Gap</span></td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<section class="section" id="training">
+
+<h2>
+Recommended Institutional Training
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📊 Biostatistics Bootcamp</h3>
+
+<p>
+Recommended because student readiness is significantly
+lower than current research-industry demand.
+</p>
+
+<div class="success">
+Priority: HIGH
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Digital Health Foundation Program</h3>
+
+<p>
+Prepare students for healthcare analytics,
+EHR systems and AI-assisted healthcare roles.
+</p>
+
+<div class="success">
+Priority: HIGH
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>🔬 Clinical Research Workshop</h3>
+
+<p>
+Research methodology, ethics, scientific writing
+and clinical study exposure.
+</p>
+
+<div class="success">
+Priority: MEDIUM
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>🌱 Pharmacognosy Practical Lab</h3>
+
+<p>
+Medicinal plant identification and practical
+herbal drug research training.
+</p>
+
+<div class="success">
+Priority: MEDIUM
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="placement">
+
+<h2>
+Placement & Internship Outcomes
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Application Funnel</h3>
+
+<p>Applications</p>
+<strong style="font-size:26px;color:#4acbff;">248</strong>
+
+<p>Shortlisted</p>
+<strong style="font-size:26px;color:#ffb45e;">132</strong>
+
+<p>Interviews</p>
+<strong style="font-size:26px;color:#55dbff;">88</strong>
+
+<p>Selected / Placed</p>
+<strong style="font-size:26px;color:#37e3a5;">64</strong>
+
+</div>
+
+<div class="card">
+
+<h3>Top Opportunity Domains</h3>
+
+<p>Ayurvedic Hospital Internships</p>
+<div class="progress"><div style="width:88%"></div></div>
+
+<p>Clinical Research</p>
+<div class="progress"><div style="width:82%"></div></div>
+
+<p>Pharmacognosy & Herbal Research</p>
+<div class="progress"><div style="width:73%"></div></div>
+
+<p>Yoga & Naturopathy</p>
+<div class="progress"><div style="width:69%"></div></div>
+
+<p>Digital Health</p>
+<div class="progress"><div style="width:78%"></div></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="research">
+
+<h2>
+Academia–Industry Collaboration
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🔬 Live Research Projects</h3>
+
+<p>
+Connect students and faculty with Ayurveda hospitals,
+research laboratories and healthcare companies
+for interdisciplinary research projects.
+</p>
+
+</div>
+
+<div class="card" id="mentorship">
+
+<h3>👨‍🏫 Industry Mentorship</h3>
+
+<p>
+Invite clinicians, researchers, pharma experts
+and digital-health professionals for mentorship,
+workshops and career guidance.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏥 Clinical Exposure</h3>
+
+<p>
+Track student participation in hospital internships,
+Panchakarma centres, community healthcare
+and clinical research environments.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤝 Curriculum Feedback</h3>
+
+<p>
+Use industry skill demand and placement outcomes
+to identify areas where academic training can improve.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+</html>

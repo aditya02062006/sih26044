@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediSetu | Healthcare Skills & Opportunities</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --bg:#06111f;
+    --card:#0d2038;
+    --card2:#102945;
+    --border:#1f4262;
+    --blue:#238cff;
+    --cyan:#21d4fd;
+    --green:#35e6a5;
+    --text:#f5f9ff;
+    --muted:#8da6bd;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at 80% 10%, #123d68 0%, transparent 30%),
+        radial-gradient(circle at 10% 50%, #0c2c4d 0%, transparent 28%),
+        var(--bg);
+
+    color:var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    border-bottom:1px solid rgba(76,125,162,.25);
+    background:rgba(6,17,31,.88);
+    backdrop-filter:blur(16px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#a8bdd0;
+    text-decoration:none;
+    font-size:14px;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-btn{
+    padding:10px 17px;
+    border-radius:8px;
+    border:1px solid #2874aa;
+}
+
+.get-started{
+    background:linear-gradient(90deg,#1875ed,#19badf);
+    color:white !important;
+    border:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:65px;
+    padding:70px 8%;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 13px;
+    border-radius:20px;
+    background:#0d3452;
+    border:1px solid #23618c;
+    color:#58dcff;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.06;
+    max-width:700px;
+    letter-spacing:-2px;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#2b8cff,#26dddf);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:23px;
+    max-width:640px;
+    font-size:17px;
+    color:var(--muted);
+    line-height:1.7;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:13px;
+}
+
+.primary-btn,
+.secondary-btn{
+    text-decoration:none;
+    padding:13px 21px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.primary-btn{
+    background:linear-gradient(90deg,#1677f0,#1cc7dd);
+    color:white;
+}
+
+.secondary-btn{
+    border:1px solid #315774;
+    color:#c7d9e7;
+    background:#0a1a2d;
+}
+
+/* =========================
+   MATCH CARD
+========================= */
+
+.match-card{
+    background:
+        linear-gradient(145deg,#0c1e34,#102b49);
+    border:1px solid #295170;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
+
+.match-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.match-header h3{
+    font-size:16px;
+}
+
+.ai-badge{
+    font-size:10px;
+    color:#54dbff;
+    padding:6px 9px;
+    background:#103958;
+    border-radius:20px;
+}
+
+.match-title{
+    margin-top:25px;
+    color:#8ea7bb;
+    font-size:12px;
+}
+
+.job-name{
+    margin-top:7px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.match-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:22px;
+}
+
+.match-percent{
+    font-size:39px;
+    font-weight:800;
+    color:#3be3b1;
+}
+
+.match-label{
+    color:#84a0b6;
+    font-size:11px;
+}
+
+.progress{
+    margin-top:12px;
+    background:#18334c;
+    height:8px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    width:86%;
+    height:100%;
+    background:linear-gradient(90deg,#24caaf,#27d7f4);
+}
+
+.skill-title{
+    margin-top:20px;
+    color:#91a8bb;
+    font-size:11px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:10px;
+}
+
+.skill-good,
+.skill-missing{
+    padding:7px 9px;
+    border-radius:6px;
+    font-size:11px;
+}
+
+.skill-good{
+    background:#11372e;
+    color:#4ce3b7;
+    border:1px solid #24775f;
+}
+
+.skill-missing{
+    background:#39291b;
+    color:#f8bc76;
+    border:1px solid #74552f;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:15px 8% 70px;
+}
+
+.stat{
+    text-align:center;
+    padding:25px 15px;
+    border-right:1px solid #203c54;
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#38c9f4;
+}
+
+.stat span{
+    color:#8199ad;
+    font-size:12px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+    padding:80px 8%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-heading small{
+    color:#3ed4f4;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.section-heading h2{
+    margin-top:10px;
+    font-size:36px;
+}
+
+.section-heading p{
+    max-width:690px;
+    margin:13px auto 0;
+    color:var(--muted);
+    line-height:1.6;
+}
+
+/* =========================
+   HEALTHCARE AREAS
+========================= */
+
+.area-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.area-card{
+    background:linear-gradient(145deg,#0b1d32,#0d2843);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px;
+    transition:.25s;
+}
+
+.area-card:hover{
+    transform:translateY(-5px);
+    border-color:#2f7faf;
+}
+
+.area-icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:11px;
+    background:#103c60;
+    font-size:22px;
+    margin-bottom:17px;
+}
+
+.area-card h3{
+    font-size:16px;
+}
+
+.area-card p{
+    margin-top:9px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* =========================
+   OPPORTUNITIES
+========================= */
+
+.opportunity-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.opportunity{
+    background:linear-gradient(145deg,#0b1d32,#0d2843);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+}
+
+.type{
+    display:inline-block;
+    font-size:10px;
+    color:#54dbff;
+    background:#0e3654;
+    padding:6px 8px;
+    border-radius:15px;
+    margin-bottom:13px;
+}
+
+.opportunity h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.opportunity p{
+    color:#859caf;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.op-skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:14px;
+}
+
+.op-skills span{
+    padding:5px 7px;
+    font-size:10px;
+    color:#b8d1e5;
+    background:#102d49;
+    border:1px solid #255376;
+    border-radius:5px;
+}
+
+/* =========================
+   FLOW
+========================= */
+
+.flow{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.flow-card{
+    padding:20px 15px;
+    text-align:center;
+    background:#0b2037;
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+.flow-number{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(90deg,#1b7ef4,#1dc8dc);
+    font-weight:bold;
+}
+
+.flow-card h4{
+    margin-top:13px;
+}
+
+.flow-card p{
+    margin-top:8px;
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    margin:60px 8%;
+    padding:50px 30px;
+    text-align:center;
+    border-radius:20px;
+    border:1px solid #285c81;
+    background:
+        radial-gradient(circle at 50% 0%,#145281,transparent 50%),
+        #0b2037;
+}
+
+.cta h2{
+    font-size:32px;
+}
+
+.cta p{
+    color:var(--muted);
+    margin:13px auto 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px 8%;
+    border-top:1px solid #1e374d;
+    color:#738ba0;
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .area-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .opportunity-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .flow{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:50px 6%;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .area-grid,
+    .opportunity-grid,
+    .flow,
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+    Medi<span>Setu</span>
+</div>
+
+<div class="nav-links">
+
+<a href="#home">Home</a>
+<a href="#features">Healthcare Skills</a>
+<a href="#opportunities">Opportunities</a>
+<a href="#how">How It Works</a>
+<a href="#about">About</a>
+
+<a class="nav-btn" href="login.html">
+    Login
+</a>
+
+<a class="nav-btn get-started" href="register.html">
+    Get Started
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<div class="hero-badge">
+    ✦ AI-Powered Healthcare Skill Intelligence
+</div>
+
+<h1>
+Bridging
+<span class="gradient-text">
+Healthcare Skills
+</span>
+with Real Opportunities.
+</h1>
+
+<p>
+MediSetu connects students, healthcare institutions,
+Ayurveda organizations, hospitals, research laboratories
+and industry through intelligent skill mapping,
+internships, research projects and placement opportunities.
+</p>
+
+<p>
+Built for the convergence of
+<strong style="color:#d9efff">
+Ayurveda, Modern Medicine, Research, Digital Health,
+Yoga & Naturopathy and Healthcare Industry.
+</strong>
+</p>
+
+<div class="hero-buttons">
+
+<a href="register.html" class="primary-btn">
+Explore MediSetu →
+</a>
+
+<a href="#opportunities" class="secondary-btn">
+View Opportunities
+</a>
+
+</div>
+
+</div>
+
+
+<!-- AI MATCH CARD -->
+
+<div class="match-card">
+
+<div class="match-header">
+
+<h3>Healthcare Skill Match</h3>
+
+<span class="ai-badge">
+✦ MEDISETU AI
+</span>
+
+</div>
+
+
+<div class="match-title">
+RECOMMENDED OPPORTUNITY
+</div>
+
+<div class="job-name">
+Ayurvedic Clinical Research Internship
+</div>
+
+
+<div class="match-row">
+
+<div>
+
+<div class="match-percent">
+86%
+</div>
+
+<div class="match-label">
+SKILL MATCH
+</div>
+
+</div>
+
+<div>
+🎯
+</div>
+
+</div>
+
+
+<div class="progress">
+<div></div>
+</div>
+
+
+<div class="skill-title">
+YOUR MATCHED SKILLS
+</div>
+
+<div class="skills">
+
+<span class="skill-good">
+✓ Ayurveda Fundamentals
+</span>
+
+<span class="skill-good">
+✓ Clinical Documentation
+</span>
+
+<span class="skill-good">
+✓ Research Methodology
+</span>
+
+<span class="skill-good">
+✓ Patient Communication
+</span>
+
+</div>
+
+
+<div class="skill-title">
+SKILL GAPS
+</div>
+
+<div class="skills">
+
+<span class="skill-missing">
+✕ Biostatistics
+</span>
+
+<span class="skill-missing">
+✕ Digital Health
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+<strong>80+</strong>
+<span>Healthcare Skills</span>
+</div>
+
+<div class="stat">
+<strong>200+</strong>
+<span>Internships & Projects</span>
+</div>
+
+<div class="stat">
+<strong>100+</strong>
+<span>Healthcare Partners</span>
+</div>
+
+<div class="stat">
+<strong>5</strong>
+<span>Skill Intelligence Domains</span>
+</div>
+
+</section>
+
+
+<!-- HEALTHCARE SKILLS -->
+
+<section class="section" id="features">
+
+<div class="section-heading">
+
+<small>
+MULTIDISCIPLINARY SKILL MAPPING
+</small>
+
+<h2>
+One Platform for Healthcare Skill Intelligence
+</h2>
+
+<p>
+MediSetu maps traditional healthcare knowledge with
+modern clinical, research, pharmaceutical and
+technology skills to improve internship and placement readiness.
+</p>
+
+</div>
+
+
+<div class="area-grid">
+
+
+<div class="area-card">
+
+<div class="area-icon">🌿</div>
+
+<h3>Ayurveda</h3>
+
+<p>
+Panchakarma, Dravyaguna, Kayachikitsa,
+Roga Nidana, Rasashastra, Bhaishajya Kalpana
+and other Ayurveda competencies.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🩺</div>
+
+<h3>Modern Medical & Clinical</h3>
+
+<p>
+Clinical diagnosis, patient examination,
+public health, documentation, infection control
+and modern patient-care skills.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🔬</div>
+
+<h3>Clinical Research</h3>
+
+<p>
+Research methodology, biostatistics,
+evidence-based healthcare, clinical trials
+and scientific research skills.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🌱</div>
+
+<h3>Pharmacognosy</h3>
+
+<p>
+Medicinal plant identification,
+natural drug sources, herbal drug research,
+quality analysis and drug development.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🧘</div>
+
+<h3>Yoga & Naturopathy</h3>
+
+<p>
+Yoga therapy, lifestyle medicine,
+preventive healthcare, wellness management
+and naturopathic approaches.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">💊</div>
+
+<h3>AYUSH & Pharma Industry</h3>
+
+<p>
+Ayurvedic pharmacy, herbal formulations,
+quality assurance, GMP, pharmacovigilance
+and regulatory affairs.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">⚕️</div>
+
+<h3>Integrative Healthcare</h3>
+
+<p>
+Combining traditional systems with
+modern clinical practice, research,
+preventive medicine and patient care.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">💻</div>
+
+<h3>Digital Health & AI</h3>
+
+<p>
+Telemedicine, electronic health records,
+healthcare analytics, AI in healthcare,
+medical informatics and digital systems.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OPPORTUNITIES -->
+
+<section class="section" id="opportunities">
+
+<div class="section-heading">
+
+<small>
+REAL HEALTHCARE OPPORTUNITIES
+</small>
+
+<h2>
+Explore Internships, Research & Industry Projects
+</h2>
+
+<p>
+Students discover opportunities based on their actual
+skills and receive personalized skill-gap recommendations
+before applying.
+</p>
+
+</div>
+
+
+<div class="opportunity-grid">
+
+
+<div class="opportunity">
+
+<span class="type">
+CLINICAL INTERNSHIP
+</span>
+
+<h3>
+Ayurvedic Hospital Internship
+</h3>
+
+<p>
+Hands-on clinical experience in Ayurveda diagnosis,
+patient care and clinical documentation.
+</p>
+
+<div class="op-skills">
+
+<span>Kayachikitsa</span>
+<span>Roga Nidana</span>
+<span>Patient Examination</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+RESEARCH INTERNSHIP
+</span>
+
+<h3>
+Ayurvedic Research Laboratory
+</h3>
+
+<p>
+Work on evidence-based Ayurveda research,
+clinical studies and scientific documentation.
+</p>
+
+<div class="op-skills">
+
+<span>Clinical Research</span>
+<span>Biostatistics</span>
+<span>Research Methodology</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+RESEARCH PROJECT
+</span>
+
+<h3>
+Pharmacognosy & Medicinal Plant Research
+</h3>
+
+<p>
+Study medicinal plants, herbal drug sources,
+phytochemical knowledge and natural-product research.
+</p>
+
+<div class="op-skills">
+
+<span>Pharmacognosy</span>
+<span>Dravyaguna</span>
+<span>Medicinal Plants</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+WELLNESS INTERNSHIP
+</span>
+
+<h3>
+Yoga & Naturopathy Internship
+</h3>
+
+<p>
+Develop practical experience in yoga therapy,
+preventive healthcare and naturopathic wellness.
+</p>
+
+<div class="op-skills">
+
+<span>Yoga Therapy</span>
+<span>Naturopathy</span>
+<span>Lifestyle Medicine</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+CLINICAL INTERNSHIP
+</span>
+
+<h3>
+Panchakarma Therapy Internship
+</h3>
+
+<p>
+Learn supervised Panchakarma procedures,
+patient assessment and Ayurveda wellness management.
+</p>
+
+<div class="op-skills">
+
+<span>Panchakarma</span>
+<span>Prakriti Assessment</span>
+<span>Patient Communication</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+INDUSTRY INTERNSHIP
+</span>
+
+<h3>
+Ayurvedic Pharmacy & Manufacturing
+</h3>
+
+<p>
+Gain exposure to herbal formulations,
+drug manufacturing, quality control and GMP.
+</p>
+
+<div class="op-skills">
+
+<span>Bhaishajya Kalpana</span>
+<span>Quality Control</span>
+<span>GMP</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+RESEARCH INTERNSHIP
+</span>
+
+<h3>
+Integrative Medicine Research
+</h3>
+
+<p>
+Explore collaborative research between traditional
+healthcare knowledge and modern clinical practices.
+</p>
+
+<div class="op-skills">
+
+<span>Integrative Medicine</span>
+<span>Clinical Research</span>
+<span>Research Ethics</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+DIGITAL HEALTH
+</span>
+
+<h3>
+AI & Digital Healthcare Internship
+</h3>
+
+<p>
+Work with healthcare data, digital systems,
+electronic records and AI-enabled healthcare solutions.
+</p>
+
+<div class="op-skills">
+
+<span>Digital Health</span>
+<span>Healthcare Analytics</span>
+<span>AI in Healthcare</span>
+
+</div>
+
+</div>
+
+
+<div class="opportunity">
+
+<span class="type">
+PUBLIC HEALTH
+</span>
+
+<h3>
+Preventive & Community Healthcare Project
+</h3>
+
+<p>
+Participate in community health,
+preventive healthcare and public-health data projects.
+</p>
+
+<div class="op-skills">
+
+<span>Public Health</span>
+<span>Preventive Healthcare</span>
+<span>Data Collection</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:35px">
+
+<a class="primary-btn" href="opportunities.html">
+View All Opportunities →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section" id="how">
+
+<div class="section-heading">
+
+<small>
+HOW MEDISETU WORKS
+</small>
+
+<h2>
+From Skill Mapping to Healthcare Career
+</h2>
+
+<p>
+A closed-loop academia-industry system that converts
+skill intelligence into learning and employment outcomes.
+</p>
+
+</div>
+
+
+<div class="flow">
+
+<div class="flow-card">
+
+<div class="flow-number">1</div>
+
+<h4>Create Profile</h4>
+
+<p>
+Student adds academic,
+clinical and professional information.
+</p>
+
+</div>
+
+
+<div class="flow-card">
+
+<div class="flow-number">2</div>
+
+<h4>Map Skills</h4>
+
+<p>
+Identify Ayurveda, clinical,
+research and digital-health skills.
+</p>
+
+</div>
+
+
+<div class="flow-card">
+
+<div class="flow-number">3</div>
+
+<h4>AI Skill Gap</h4>
+
+<p>
+MediSetu compares student skills
+with healthcare industry requirements.
+</p>
+
+</div>
+
+
+<div class="flow-card">
+
+<div class="flow-number">4</div>
+
+<h4>Match Opportunities</h4>
+
+<p>
+Receive personalized internships,
+research projects and job recommendations.
+</p>
+
+</div>
+
+
+<div class="flow-card">
+
+<div class="flow-number">5</div>
+
+<h4>Track Outcomes</h4>
+
+<p>
+Institutions monitor applications,
+skills, internships and placement progress.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<div class="section-heading">
+
+<small>
+ACADEMIA × HEALTHCARE INDUSTRY
+</small>
+
+<h2>
+Why MediSetu?
+</h2>
+
+<p>
+Healthcare education often contains a gap between
+academic learning and real industry requirements.
+MediSetu creates a common skill-intelligence layer
+connecting students, academic institutions,
+hospitals, AYUSH organizations, research laboratories
+and healthcare companies.
+</p>
+
+</div>
+
+
+<div class="area-grid">
+
+<div class="area-card">
+
+<div class="area-icon">🎓</div>
+
+<h3>For Students</h3>
+
+<p>
+Build verified healthcare skills,
+discover opportunities and understand
+exactly what you need to learn next.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🏥</div>
+
+<h3>For Hospitals & Industry</h3>
+
+<p>
+Find candidates based on actual skills,
+publish internships and identify emerging
+healthcare talent.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🏫</div>
+
+<h3>For Institutions</h3>
+
+<p>
+Identify curriculum skill gaps,
+monitor employability and understand
+healthcare-industry demand.
+</p>
+
+</div>
+
+
+<div class="area-card">
+
+<div class="area-icon">🤝</div>
+
+<h3>For Researchers & Mentors</h3>
+
+<p>
+Connect students with mentorship,
+live projects, research collaboration
+and interdisciplinary healthcare innovation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<div class="cta">
+
+<h2>
+Build Your Healthcare Career with MediSetu
+</h2>
+
+<p>
+Discover your strengths, close your skill gaps
+and connect with meaningful healthcare opportunities.
+</p>
+
+<a href="register.html" class="primary-btn">
+Create Your Profile →
+</a>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div>
+<strong style="color:white">
+MediSetu
+</strong>
+<br><br>
+Bridging Healthcare Education, Skills & Industry
+</div>
+
+<div>
+SIH26044 Prototype
+</div>
+
+</footer>
+
+</body>
+</html>
